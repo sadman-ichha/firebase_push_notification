@@ -38,7 +38,6 @@ class _HomeScreenState extends State<HomeScreen> {
         print(message.notification!.title);
         print(message.notification!.body);
         print(message.data['path']);
-        Navigator.pushNamed(context, message.data['path']);
       }
     });
   }
@@ -47,7 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("This is Home Screen"),
+        child: Text(
+          "This is Home Screen",
+          style: TextStyle(fontSize: 20.0),
+        ),
       ),
     );
   }
